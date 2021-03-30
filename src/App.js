@@ -18,15 +18,14 @@ function App() {
                 >
                     Learn React
                 </a>
-            </header>
-            <div>
+                <br />
                 <Button
                     backgroundColor="#f918cf"
                     label="Button"
                     onClick={() => {}}
                     primary
                 />
-            </div>
+            </header>
         </div>
     );
 }
