@@ -1,3 +1,4 @@
+import { Button } from "cra-meta-repo-ui1";
 import logo from "./logo.svg";
 import "./App.css";
 
@@ -18,6 +19,14 @@ function App() {
                     Learn React
                 </a>
             </header>
+            <div>
+                <Button
+                    backgroundColor="#f918cf"
+                    label="Button"
+                    onClick={() => {}}
+                    primary
+                />
+            </div>
         </div>
     );
 }
