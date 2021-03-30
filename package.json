@@ -13,7 +13,8 @@
         "web-vitals": "^1.0.1"
     },
     "scripts": {
-        "start": "react-app-rewired start",
+        "start": "yarn concurrently yarn:dev",
+        "dev": "react-app-rewired start",
         "build": "react-app-rewired build",
         "test": "react-app-rewired test",
         "eject": "react-app-rewired eject"
@@ -37,6 +38,7 @@
         ]
     },
     "devDependencies": {
+        "concurrently": "^6.0.0",
         "react-app-rewire-babel-loader": "^0.1.1",
         "react-app-rewired": "^2.1.8"
     }
