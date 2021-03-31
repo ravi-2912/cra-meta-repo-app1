@@ -17,7 +17,7 @@
         "dev": "react-app-rewired start",
         "build": "react-app-rewired build",
         "test": "react-app-rewired test",
-        "eject": "react-app-rewired eject"
+        "eject": "react-scripts eject"
     },
     "eslintConfig": {
         "extends": [
@@ -38,7 +38,6 @@
         ]
     },
     "devDependencies": {
-        "concurrently": "^6.0.0",
         "react-app-rewire-babel-loader": "^0.1.1",
         "react-app-rewired": "^2.1.8"
     }
