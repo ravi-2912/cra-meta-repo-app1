@@ -10,18 +10,18 @@ const resolveApp = (relativePath) => path.resolve(appDirectory, relativePath);
 
 module.exports = function override(config, env) {
     const commonFolder = "../../../common";
+    if (fs.existsSync(commonFolder)) {
+        const getDirectories = (source) =>
+            fs
+                .readdirSync(source, { withFileTypes: true })
+                .filter((dirent) => dirent.isDirectory())
+                .map((dirent) => `${commonFolder}/${dirent.name}`);
 
-    const getDirectories = (source) =>
-        fs
-            .readdirSync(source, { withFileTypes: true })
-            .filter((dirent) => dirent.isDirectory())
-            .map((dirent) => `${commonFolder}/${dirent.name}`);
+        const commonDirectories = getDirectories(commonFolder);
 
-    const commonDirectories = getDirectories(commonFolder);
-
-    commonDirectories.forEach((dir) => {
-        config = rewireBabelLoader.include(config, resolveApp(dir));
-    });
-
+        commonDirectories.forEach((dir) => {
+            config = rewireBabelLoader.include(config, resolveApp(dir));
+        });
+    }
     return config;
 };
