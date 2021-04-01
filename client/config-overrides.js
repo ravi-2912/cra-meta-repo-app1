@@ -9,7 +9,7 @@ const appDirectory = fs.realpathSync(process.cwd());
 const resolveApp = (relativePath) => path.resolve(appDirectory, relativePath);
 
 module.exports = function override(config, env) {
-    const commonFolder = "../../common";
+    const commonFolder = "../../../common";
 
     const getDirectories = (source) =>
         fs
